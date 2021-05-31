@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="amount.css" />
+    <title>Enter Amount</title>
+  </head>
+  <body>
+    <div class="log-form">
+      <h2>Amount Details</h2>
+      <form action="/amount_submit" method="POST">
+        <input type="text" title="username" placeholder="Enter Amount" name="amount"/>
+        <input
+          type="tel"
+          title="username"
+          placeholder="Phone Number"
+          name="phno"
+        />
+        <input type="password" title="username" placeholder="Enter Password" name="pass"/>
+        <div class="radiocontainer" style="height: 160px; overflow-y: scroll">
+          <h3>Pay For:-</h3>
+          <div class="radio">
+            <input id="radio-1" name="radio_button" type="radio" checked value="Canteen"/>
+            <label for="radio-1" class="radio-label">Canteen</label>
+          </div>
+          <div class="radio">
+            <input id="radio-2" name="radio_button" type="radio" value="Library"/>
+            <label for="radio-2" class="radio-label">Library</label>
+          </div>
+          <div class="radio">
+            <input id="radio-3" name="radio_button" type="radio" value="Stationary"/>
+            <label for="radio-3" class="radio-label">Stationary</label>
+          </div>
+          <textarea
+            placeholder="Description about purchased items!"
+            rows="20"
+            name="comment"
+            id="comment_text"
+            cols="40"
+            class="ui-autocomplete-input"
+            autocomplete="off"
+            role="textbox"
+            aria-autocomplete="list"
+            aria-haspopup="true"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn">Submit Details</button>
+      </form>
+      <a href="signin.html">
+        <button class="btn" type="submit" id="signinbtn">Signin page</button>
+      </a>
+    </div>
+  </body>
+</html>

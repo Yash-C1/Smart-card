@@ -1,0 +1,290 @@
+/*CSS Reset*/
+*{
+    margin:0;
+    padding:0;
+}
+/*navigation bar*/
+#navbar{
+    display: flex;
+    align-items: center;
+    position:sticky;
+    top:0px;
+}
+/*Very Very Imp for navbar */
+#navbar::before{
+    content:"";
+    background-color:black;
+    position: absolute;
+    top:0px;
+    left:0px;
+    height: 100%;
+    width:100%;
+    z-index: -1;
+    opacity:0.7;
+}
+/*Navigation Bar: Logo and Image*/
+#logo{
+    margin: 34px 45px;
+}
+#logo img{
+     height:50px;
+     width: 50px;
+     border-radius: 10px;
+}
+/*Navigation Bar: List Styling*/
+#navbar ul{
+   display:flex;
+   font-family: 'Baloo Bhai 2', cursive;
+}
+#navbar ul li{ 
+    list-style:none;
+    font-size:1.3rem;
+ }
+ #navbar ul li a{
+    color:blanchedalmond;
+    display:block;
+    padding:3px 22px;
+    border-radius:20px;
+    text-decoration:none;    
+ }
+ #navbar ul li a:hover{
+    color:black;
+    background-color:white;
+    display:block;
+    padding:3px 22px;
+    border-radius:20px;
+    text-decoration:none;    
+ }
+
+ /*Home section*/
+
+ #home{
+     display:flex;
+     flex-direction:column;
+     padding:3px 200px;
+     height: 727px;
+     
+     align-items: center;
+ }
+ #home::before{
+    content:"";
+    
+    position: absolute;
+    height: 100%;
+    width:100%;
+    top:0px;
+    left:0px;
+    z-index: -1;
+    opacity:0.89;
+}
+#home h1{
+    color:white;
+    text-align: center;
+    padding:140px 200px;
+
+}
+#home p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+
+}
+
+
+ /*attendance section*/
+
+ #attendance {
+     display:flex;
+     flex-direction:column;
+     padding:3px 200px;
+     height: 727px;
+     
+     align-items: center;
+ }
+ #attendance ::before{
+    content:"";
+    
+    position: absolute;
+    height: 100%;
+    width:100%;
+    top:0px;
+    left:0px;
+    z-index: -1;
+    opacity:0.89;
+}
+#attendance  h2{
+    color:white;
+    text-align: center;
+    padding:140px 200px;
+
+}
+#attendance  p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+
+}
+#attendance  table{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+/*balance section*/
+
+ #balance {
+     display:flex;
+     flex-direction:column;
+     padding:3px 200px;
+     height: 727px;
+     
+     align-items: center;
+ }
+ #balance ::before{
+    content:"";
+    
+    position: absolute;
+    height: 100%;
+    width:100%;
+    top:0px;
+    left:0px;
+    z-index: -1;
+    opacity:0.89;
+}
+#balance  h2{
+    color:white;
+    text-align: center;
+    padding:140px 200px;
+
+}
+#balance  p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+
+}
+
+/*history section*/
+
+ #history {
+     display:flex;
+     flex-direction:column;
+     padding:3px 200px;
+     height: 727px;
+     
+     align-items: center;
+ }
+ #history ::before{
+    content:"";
+    
+    position: absolute;
+    height: 100%;
+    width:100%;
+    top:0px;
+    left:0px;
+    z-index: -1;
+    opacity:0.89;
+}
+#history  h2{
+    color:white;
+    text-align: center;
+    padding:140px 200px;
+
+}
+#history  p{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+
+}
+
+/*contact Section*/
+
+#contact{
+    position:relative;
+
+}
+#contact::before{
+    content:"";
+    position: absolute;
+    /* background: url("img9.jpg") no-repeat center center/cover; */
+    background: url("th.jpg ");
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.7;
+}
+footer{
+    background:black;
+    color:white;
+    padding:9px 20px;
+
+}
+#contact-box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width:100%;
+    padding:0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+
+}
+#contact-box form{
+    width:15%;
+
+}
+#contact-box label{
+    font-size:1.3rem;
+    font-family: 'Bree Serif', serif; 
+
+}
+#contact  h2{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+
+}
+#contact  label{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+
+}
+
+/*Utility Class*/
+
+.h-primary{
+    font-size:3.8rem;
+    padding:12px;  
+    font-family: 'Bree Serif', serif; 
+}
+.h-secondary{
+    font-size:2.3rem;
+    padding:12px;
+    font-family: 'Bree Serif', serif;
+}
+.btn{
+    padding:6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    margin:17px;
+    font-size:20px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.center{
+       text-align: center;
+}

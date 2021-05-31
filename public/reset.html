@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="resetPassword.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+</head>
+<body> 
+    
+<div class="card login-form">
+	<div class="card-body">
+		<h3 class="card-title text-center">Change password</h3>
+		
+		<!--Password must contain one lowercase letter, one number, and be at least 7 characters long.-->
+		
+		<div class="card-text">
+			<form action="/new_password" method="POST">
+				<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <strong>Holy Student!</strong> You should check in on some of those fields below.
+  <a class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </a>
+</div>
+                <div>
+	                <label for="exampleInputEmail1">Your full name.</label>
+	                <input type="text" class="form-control form-control-sm" name="name">
+                </div>
+                <div>
+					<label for="exampleInputEmail1">Your new password</label>
+					<input type="password" class="form-control form-control-sm" name="new_pass">
+				</div>
+				<div>
+					<label for="exampleInputEmail1">Repeat password</label>
+					<input type="password" class="form-control form-control-sm" name="new_pass_rep">
+				</div>
+
+				
+
+				<button type="submit" class="btn btn-dark btn-block submit-btn">Confirm</button>
+			</form>
+		</div>
+	</div>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="amount.css" />
+    <title>Enter Amount</title>
+  </head>
+  <body>
+    <div class="log-form">
+      <h2>Attendance</h2>
+      <form action="/total_attendance" method="POST">
+        <input
+          type="text"
+          name="pin"
+          pattern="[0-9]{4}"
+          maxlength="4"
+          placeholder="Enter PIN Number"
+        />
+        <div class="radiocontainer" style="height: 160px; overflow-y: scroll">
+          <div>
+            <label for="division"><h3>Select your division:</h3></label>
+            <select name="division" id="division">
+              <option value="SE5">SE5</option>
+              <option value="SE6">SE6</option>
+              <option value="SE7">SE7</option>
+              <option value="SE8">SE8</option>
+            </select>
+          </div>
+          <br />
+
+          <div>
+            <label for="subject"><h3>Select your Subject</h3></label>
+            <select name="subjects" id="subject">
+              <option value="PCS">PCS</option>
+              <option value="CS">CS</option>
+              <option value="OOP">OOP</option>
+              <option value="SS">SS</option>
+              <option value="ESD">ESD</option>
+            </select>
+          </div>
+          <br />
+          <h3>Select Number of lectures</h3>
+          <div class="radio">
+            <input
+              id="radio-1"
+              name="lec_no"
+              type="radio"
+              checked
+              value="1"
+            />
+            <label for="radio-1" class="radio-label">1</label>
+          </div>
+          <div class="radio">
+            <input id="radio-2" name="radio_button" type="radio" value="2" />
+            <label for="radio-2" class="radio-label">2</label>
+          </div>
+          <div class="radio">
+            <input id="radio-3" name="radio_button" type="radio" value="3" />
+            <label for="radio-3" class="radio-label">3</label>
+          </div>
+          <textarea
+            placeholder="Lecture Remark"
+            rows="20"
+            name="comment"
+            id="comment_text"
+            cols="40"
+            class="ui-autocomplete-input"
+            autocomplete="off"
+            role="textbox"
+            aria-autocomplete="list"
+            aria-haspopup="true"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn">Submit Details</button>
+      </form>
+      <a href="signin.html">
+        <button class="btn" type="submit" id="signinbtn">Signin page</button>
+      </a>
+    </div>
+  </body>
+</html>

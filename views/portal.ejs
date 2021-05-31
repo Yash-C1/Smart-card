@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PICT portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" media="screen and (max-width: 728px)" href="phone.css">
+</head>
+
+<body style = "background-image:url(th.jpg)">
+    <nav id="navbar">
+        <div id="logo">
+            <img src="PICT-Logo.jpg" alt="PICT portal.com">
+        </div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#attendance">Attendance</a></li>
+            <li class="item"><a href="#balance">Balance</a></li>
+            <li class="item"><a href="#history">History</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1 class="h-primary center"> Welcome to PICT Portal.</h1>
+        <p> <%= userName %><br><br></p>
+        <p>You can now just swipe the smart card to mark your attendance and make payments. You can use this card anywhere inside the PICT Campus.
+       This will help you to keep a track of your expenditure. </p>
+    </section>
+    <hr>
+    <section id="attendance">
+        <h2 class="h-secondary center">Attendance</h2>
+        
+        
+
+        <table style="width:100%">
+                <tr>
+                  <th>Subject</th>
+                  <th>No of lectures attended</th>
+                  <th>Total number of lectures</th>
+                  <th>Subject-wise attendance</th>
+                </tr>
+
+                
+
+
+
+                <tr>
+                  <td>S&S</td>
+                  <td><%=user_SS%></td>
+                  <td>10</td>
+                  <td><%=((user_SS)*(10))%></td>
+                </tr>
+                <tr>
+                  <td>PCS</td>
+                  <td><%=user_PCS%></td>
+                  <td>10</td>
+                  <td><%=((user_PCS)*(10))%></td>
+                </tr>
+                <tr>
+                  <td>CS</td>
+                  <td><%=user_CS%></td>
+                  <td>10</td>
+                  <td><%=((user_CS)*(10))%></td>
+                </tr>
+                 <tr>
+                  <td>OOP</td>
+                  <td><%=user_OOP%></td>
+                  <td>10</td>
+                  <td><%=((user_OOP)*(10))%></td>
+                </tr>
+                 <tr>
+                  <td>ESD</td>
+                  <td><%=user_ESD%></td>
+                  <td>10</td>
+                  <td><%=((user_ESD)*(10))%></td>
+                </tr>
+                
+                
+
+              </table>
+
+              
+
+
+    </section>
+    <hr>
+    <section id="balance">
+        <h2 class="h-secondary center">Balance</h2>
+        <p>Hello <%= userName %> ! <br>Your balance is:<br>Rs :  <%= user_balance %></p>
+    </section>
+    <hr>
+    <section id="history">
+        <h2 class="h-secondary center">History</h2>
+        <p>History of your transactions:</p>
+        <p><%= user_history %></p>
+    </section>
+    <hr>
+    
+   
+    <section id="contact">
+        <h2 class="h-primary center">Contact Us</h2>
+        <div id="contact-box">
+            <form action="/message" method="POST" target="uploader_iframe">
+                
+                <div class="form-group">
+                    <label for="message">Message :</label>
+                    <textarea type="message" name="message" id="message" placeholder="Enter Message"></textarea>
+                </div>
+
+                <button type="submit" class="submitbtn" onclick="alert(' Message received!')">Submit</button>
+                
+            </form>
+            <iframe id="uploader_iframe" name="uploader_iframe" style="display: none;"></iframe>
+        </div>
+    </section>
+    <footer>
+        <div class="center">
+            Copyright &copy; PICT Portal. All Rights Reserved
+        </div>
+    </footer>
+
+</body>
+
+</html>
