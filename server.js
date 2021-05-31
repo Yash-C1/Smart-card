@@ -4,6 +4,7 @@ var mongoose = require("mongoose");
 var nodemailer = require("nodemailer");
 const app = express();
 var ejs = require("ejs");
+const port = process.env.PORT || 3000;
 
 
 
